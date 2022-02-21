@@ -16,11 +16,11 @@ const TripList = ({ navigation }) => {
   return (
     <Container>
       <Text>anything</Text>
-      {/* <Heading mb="2" size="md">
+      <Heading mb="2" size="md">
         {" "}
         trips{" "}
       </Heading>
-      {tripList} */}
+      {tripList}
     </Container>
   );
 };
