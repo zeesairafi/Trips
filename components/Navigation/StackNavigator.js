@@ -1,5 +1,8 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
+import TripDetail from "../Trips/TripDetail";
+import TripList from "../Trips/TripsList";
+import TripItem from "../Trips/TripItem";
 
 const StackNavigator = () => {
   const { Navigator, Screen } = createStackNavigator();
