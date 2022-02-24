@@ -34,10 +34,11 @@ class AuthStore {
     } catch (error) {}
   };
 
-  signUp = async (user) => {
+  signUp = async (user, navigation) => {
     try {
       const resp = await api.post("/signup", user);
       this.setUser(resp.data.token);
+      navigation.navigate("Trips");
     } catch (error) {}
   };
   signOut = async () => {

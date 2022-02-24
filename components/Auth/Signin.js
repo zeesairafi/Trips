@@ -80,7 +80,7 @@ const Signin = ({ navigation }) => {
                 fontWeight: "medium",
                 fontSize: "sm",
               }}
-              onPress={() => navigation.navigate("Signin")}
+              onPress={() => navigation.navigate("Signup")}
             >
               Sign Up
             </Link>

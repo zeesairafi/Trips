@@ -13,14 +13,7 @@ const TripList = ({ navigation }) => {
     "🚀 ~ file: tripList.js ~ line 13 ~ TripList ~ tripStore.trips",
     tripStore.trips
   );
-  return (
-    <Container>
-      <Heading mb="2" size="md">
-        trips
-      </Heading>
-      {tripList}
-    </Container>
-  );
+  return <>{tripList}</>;
 };
 
 export default observer(TripList);

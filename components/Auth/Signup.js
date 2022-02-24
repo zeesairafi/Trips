@@ -24,13 +24,14 @@ const Signup = ({ navigation }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = () => {
-    if (user.password == confirmPassword) authstore.signUp(user);
+    if (user.password == confirmPassword) authstore.signUp(user, navigation);
     else
       toast.show({
         title: "Password does not match",
         status: "danger",
       });
   };
+
   return (
     <Center w="100%">
       <Box safeArea p="2" py="8" w="90%" maxW="290">

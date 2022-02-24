@@ -12,10 +12,13 @@ const Home = ({ navigation }) => {
     >
       <View style={styles.titleView}>
         <Text style={styles.title}>Trips</Text>
+        <Button
+          style={{ width: 150 }}
+          onPress={() => navigation.navigate("Trips")}
+        >
+          Explore Trips
+        </Button>
       </View>
-      <Button onPress={() => navigation.navigate("Trips")}>
-        Explore Trips
-      </Button>
     </ImageBackground>
   );
 };
@@ -25,5 +28,11 @@ export default Home;
 const styles = StyleSheet.create({
   background: { flex: 1, width: "100%", height: "100%" },
   title: { color: "#000", fontSize: 38, textAlign: "center" },
-  titleView: { height: "40%", alignItems: "center", justifyContent: "center" },
+  titleView: {
+    marginTop: "20%",
+    height: "30%",
+    alignItems: "center",
+    justifyContent: "space-between",
+    display: "flex",
+  },
 });

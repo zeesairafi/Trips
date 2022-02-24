@@ -3,16 +3,13 @@ import React from "react";
 import { AspectRatio, Box, Center, Heading, HStack, Stack } from "native-base";
 
 const TripItem = ({ navigation, trip }) => {
-  {
-    /* trip: trip => data from props */
-  }
-
   return (
     <Pressable
       onPress={() => navigation.navigate("TripDetail", { trip: trip })}
     >
       <Box alignItems="center">
         <Box
+          width={1000}
           maxW="80"
           rounded="lg"
           overflow="hidden"
@@ -33,6 +30,7 @@ const TripItem = ({ navigation, trip }) => {
           <Box>
             <AspectRatio w="100%" ratio={16 / 9}>
               <Image
+                style={{ width: 1000, height: 1000 }}
                 source={{
                   uri: trip.image,
                 }}
