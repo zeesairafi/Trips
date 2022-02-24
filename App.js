@@ -9,10 +9,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <NativeBaseProvider>
-        {/* <Home /> */}
-
         <StackNavigator />
-        {/* <TripDetail /> */}
       </NativeBaseProvider>
     </NavigationContainer>
   );

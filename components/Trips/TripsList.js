@@ -1,5 +1,5 @@
 import React from "react";
-import TripStore from "../../stores/tripStore";
+import tripStore from "../../stores/tripStore";
 import TripItem from "./TripItem";
 import { observer } from "mobx-react";
 import { Container, Heading } from "native-base";
@@ -10,15 +10,13 @@ const TripList = ({ navigation }) => {
     <TripItem key={trip._id} trip={trip} navigation={navigation} />
   ));
   console.log(
-    "🚀 ~ file: TripList.js ~ line 13 ~ TripList ~ TripStore.trips",
-    TripStore.trips
+    "🚀 ~ file: tripList.js ~ line 13 ~ TripList ~ tripStore.trips",
+    tripStore.trips
   );
   return (
     <Container>
-      <Text>anything</Text>
       <Heading mb="2" size="md">
-        {" "}
-        trips{" "}
+        trips
       </Heading>
       {tripList}
     </Container>

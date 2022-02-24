@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 import api from "./api";
 
 class TripStore {
-  trip = [];
+  trips = [];
   loading = true;
   constructor() {
     makeAutoObservable(this, {});
@@ -10,7 +10,11 @@ class TripStore {
   fetchTrip = async () => {
     try {
       const response = await api.get("/trips");
-      this.trip = response.data;
+      this.trips = response.data;
+      console.log(
+        "🚀 ~ file: tripStore.js ~ line 14 ~ TripStore ~ fetchTrip= ~ this.trips",
+        this.trips
+      );
       this.loading = false;
     } catch (e) {
       console.log(e);
